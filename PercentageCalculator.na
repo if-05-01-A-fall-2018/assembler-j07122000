@@ -1,0 +1,50 @@
+"What is the maximum number of points?What is the number of points actually achieved?Percentage:"
+inc 12
+
+# What is the maximum number of points?
+lit 0 
+lit 37
+lit 38
+out 2
+
+# read int
+la 0 32
+la 0 36
+in 0
+
+# What is the number of points actually achieved?
+lit 37
+lit 47
+lit 48
+out 2
+
+# read int
+la 0 40
+la 0 44
+in 0
+
+# Percentage:
+lit 84
+lit 11
+lit 12
+out 2
+
+# read int
+la 0 48
+lv 0 40
+lit 100
+mul
+sto
+la 0 52
+lv 0 48
+lv 0 32
+div
+sto
+
+lv 0 48 
+lit 1
+out 0
+out 3
+halt
+
+

@@ -1,0 +1,71 @@
+"Please enter a number:No negativ values allowed!"
+inc 32
+
+lit 0 
+lit 22
+lit 23
+out 2
+
+la 0 32
+la 0 36
+in 0
+out 3
+
+la 0 40
+lit 2
+sto
+
+lv 0 32
+lit 0
+rel 5 
+fjmp .negativ
+jmp .loop
+
+.loop
+lv 0 32 
+lit 1
+rel 2
+tjmp .end
+
+
+lv 0 32
+lv 0 40
+mod
+
+
+lit 0
+rel 2
+fjmp .not_null
+la 0 32
+lv 0 32 
+lv 0 40
+div 
+sto 
+lv 0 40
+lit 1
+out 0
+out 3
+jmp .loop
+
+     
+
+.not_null
+la 0 40 
+lv 0 40
+lit 1
+add 
+sto
+
+jmp .loop
+
+
+.negativ
+lit 22
+lit 26
+lit 27
+out 2
+.end
+
+.end 
+out 3
+halt

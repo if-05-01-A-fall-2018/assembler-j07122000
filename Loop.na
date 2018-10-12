@@ -1,0 +1,48 @@
+"Enter a number:Loop:"
+inc 12
+
+# Enter a number:
+lit 0
+lit 15
+lit 16
+out 2
+
+# read int
+la 0 32
+la 0 36
+in 0
+out 3
+
+# new variable 
+la 0 40
+lit 0
+lit 1
+add
+sto
+
+# output
+lv 0 40
+lit 2
+out 0
+jmp .loop
+
+.loop
+lv 0 32
+lv 0 40
+rel 2
+tjmp .end
+la 0 40
+lv 0 40
+lit 1
+add
+sto
+lv 0 40
+lit 1
+out 0
+jmp .loop
+
+.end
+out 3
+halt
+
+
